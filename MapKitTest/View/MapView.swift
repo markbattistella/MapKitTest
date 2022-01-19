@@ -6,32 +6,37 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapView: View {
 	
 	@StateObject var mapData = MapViewModel()
-
+	
 	var body: some View {
 		
 		ZStack {
+			
 			UIMapView()
 				.environmentObject(mapData)
 				.ignoresSafeArea()
 			
 			VStack(alignment: .trailing) {
 				Spacer()
-				
-				Button {
-					mapData.recentreLocation()
-				} label: {
-					Image(systemName: "location.fill")
-						.padding()
-						.background(Color(.systemBackground))
-						.foregroundColor(.accentColor)
-						.clipShape(Circle())
-						.shadow(radius: 10)
+
+				HStack {
+					Button {
+						mapData.showOverlay.toggle()
+					} label: {
+						MapOverlayButton(image: "circle.dashed")
+					}
+					
+					Button {
+						mapData.recentreLocation()
+					} label: {
+						MapOverlayButton(image: "location.fill")
+					}
 				}
 			}
 		}
-    }
+	}
 }

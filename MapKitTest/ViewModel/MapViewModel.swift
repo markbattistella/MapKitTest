@@ -19,10 +19,11 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 	@Published var mapView = MKMapView()
 	@Published var region: MKCoordinateRegion!
 	@Published var authorizationStatus: CLAuthorizationStatus
-
+	@Published var showOverlay = false
+	
 	private let manager = CLLocationManager()
-
-
+	
+	
 	// MARK: - initialisation
 	override init() {
 		authorizationStatus = manager.authorizationStatus
@@ -30,8 +31,8 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 		manager.delegate = self
 		manager.startUpdatingLocation()
 	}
-
-
+	
+	
 	// MARK: - stubs
 	
 	// get the current authorised location use
@@ -41,13 +42,15 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 	
 	// get the items for the map
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		
 		guard let location = locations.last else { return }
+		
 		region = MKCoordinateRegion(
 			center: location.coordinate,
 			latitudinalMeters: MapDetails.defaultLatitudinalMeters,
 			longitudinalMeters: MapDetails.defaultLongitudinalMeters
 		)
-	
+		
 		// set the region
 		mapView.setRegion(region, animated: true)
 		
@@ -62,8 +65,8 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
 		print(error.localizedDescription)
 	}
-
-
+	
+	
 	// MARK: - methods
 	
 	// trigger apple permission
@@ -74,7 +77,13 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 	// call the update location
 	func recentreLocation() {
 		
-		guard let _ = region else { return }
+		guard let location = manager.location?.coordinate else { return }
+		
+		region = MKCoordinateRegion(
+			center: location,
+			latitudinalMeters: MapDetails.defaultLatitudinalMeters,
+			longitudinalMeters: MapDetails.defaultLongitudinalMeters
+		)
 		
 		// set the region
 		mapView.setRegion(region, animated: true)
@@ -84,5 +93,7 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 		
 		// stop using the gps
 		manager.stopUpdatingLocation()
+		
+		manager.delegate = nil
 	}
 }
