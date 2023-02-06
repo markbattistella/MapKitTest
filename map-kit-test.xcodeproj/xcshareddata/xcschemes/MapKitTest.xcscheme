@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A3CB782126E1B94E004689CC"
-               BuildableName = "MapKitTest.app"
-               BlueprintName = "MapKitTest"
-               ReferencedContainer = "container:MapKitTest.xcodeproj">
+               BuildableName = "map-kit-test.app"
+               BlueprintName = "map-kit-test"
+               ReferencedContainer = "container:map-kit-test.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3CB782126E1B94E004689CC"
-            BuildableName = "MapKitTest.app"
-            BlueprintName = "MapKitTest"
-            ReferencedContainer = "container:MapKitTest.xcodeproj">
+            BuildableName = "map-kit-test.app"
+            BlueprintName = "map-kit-test"
+            ReferencedContainer = "container:map-kit-test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3CB782126E1B94E004689CC"
-            BuildableName = "MapKitTest.app"
-            BlueprintName = "MapKitTest"
-            ReferencedContainer = "container:MapKitTest.xcodeproj">
+            BuildableName = "map-kit-test.app"
+            BlueprintName = "map-kit-test"
+            ReferencedContainer = "container:map-kit-test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

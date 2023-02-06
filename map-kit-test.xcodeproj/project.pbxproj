@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		A3CAF4EC26E3174C004E7A5B /* MapOverlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlayButton.swift; sourceTree = "<group>"; };
-		A3CB782226E1B94E004689CC /* MapKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3CB782226E1B94E004689CC /* map-kit-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-kit-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CB782526E1B94E004689CC /* MapKitTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitTestApp.swift; sourceTree = "<group>"; };
 		A3CB782926E1B94F004689CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3CB782C26E1B94F004689CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		A3CB781926E1B94E004689CC = {
 			isa = PBXGroup;
 			children = (
-				A3CB782426E1B94E004689CC /* MapKitTest */,
+				A3CB782426E1B94E004689CC /* map-kit-test */,
 				A3CB782326E1B94E004689CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		A3CB782326E1B94E004689CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A3CB782226E1B94E004689CC /* MapKitTest.app */,
+				A3CB782226E1B94E004689CC /* map-kit-test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A3CB782426E1B94E004689CC /* MapKitTest */ = {
+		A3CB782426E1B94E004689CC /* map-kit-test */ = {
 			isa = PBXGroup;
 			children = (
 				A3CB784D26E1D359004689CC /* Utilities */,
@@ -73,7 +73,7 @@
 				A3CB782926E1B94F004689CC /* Assets.xcassets */,
 				A3CB784E26E1D36A004689CC /* Main */,
 			);
-			path = MapKitTest;
+			path = "map-kit-test";
 			sourceTree = "<group>";
 		};
 		A3CB782B26E1B94F004689CC /* Preview Content */ = {
@@ -149,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A3CB782126E1B94E004689CC /* MapKitTest */ = {
+		A3CB782126E1B94E004689CC /* map-kit-test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3CB783126E1B94F004689CC /* Build configuration list for PBXNativeTarget "MapKitTest" */;
+			buildConfigurationList = A3CB783126E1B94F004689CC /* Build configuration list for PBXNativeTarget "map-kit-test" */;
 			buildPhases = (
 				A3CB781E26E1B94E004689CC /* Sources */,
 				A3CB781F26E1B94E004689CC /* Frameworks */,
@@ -161,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = MapKitTest;
-			productName = MapKitTest2;
-			productReference = A3CB782226E1B94E004689CC /* MapKitTest.app */;
+			name = "map-kit-test";
+			productName = "map-kit-test2";
+			productReference = A3CB782226E1B94E004689CC /* map-kit-test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A3CB781D26E1B94E004689CC /* Build configuration list for PBXProject "MapKitTest" */;
+			buildConfigurationList = A3CB781D26E1B94E004689CC /* Build configuration list for PBXProject "map-kit-test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -193,7 +193,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A3CB782126E1B94E004689CC /* MapKitTest */,
+				A3CB782126E1B94E004689CC /* map-kit-test */,
 			);
 		};
 /* End PBXProject section */
@@ -352,17 +352,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MapKitTest/Main/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"map-kit-test/Main/Preview Content\"";
 				DEVELOPMENT_TEAM = 36N7S5EZ55;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MapKitTest/Main/Info.plist;
+				INFOPLIST_FILE = "map-kit-test/Main/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MapKit Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.markbattistella.MapKitTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markbattistella.map-kit-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -374,17 +379,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MapKitTest/Main/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"map-kit-test/Main/Preview Content\"";
 				DEVELOPMENT_TEAM = 36N7S5EZ55;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MapKitTest/Main/Info.plist;
+				INFOPLIST_FILE = "map-kit-test/Main/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MapKit Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.markbattistella.MapKitTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markbattistella.map-kit-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -393,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A3CB781D26E1B94E004689CC /* Build configuration list for PBXProject "MapKitTest" */ = {
+		A3CB781D26E1B94E004689CC /* Build configuration list for PBXProject "map-kit-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3CB782F26E1B94F004689CC /* Debug */,
@@ -402,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3CB783126E1B94F004689CC /* Build configuration list for PBXNativeTarget "MapKitTest" */ = {
+		A3CB783126E1B94F004689CC /* Build configuration list for PBXNativeTarget "map-kit-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3CB783226E1B94F004689CC /* Debug */,
